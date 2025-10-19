@@ -1,0 +1,32 @@
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "nextjs-voice-ai",
+    "main": ".open-next/worker.js",
+    "compatibility_date": "2025-10-11",
+    "compatibility_flags": [
+        "nodejs_compat",
+        "global_fetch_strictly_public"
+    ],
+    "dev": {
+        "port": 3000
+    },
+    "assets": {
+        "binding": "ASSETS",
+        "directory": ".open-next/assets"
+    },
+    "observability": {
+        "enabled": true
+    },
+    "durable_objects": {
+        "bindings": [
+            {
+                "name": "VOICE_AI_DO",
+                "class_name": "VoiceAIDurableObject",
+                "script_name": "voice-ai-worker"
+            }
+        ]
+    },
+    "ai": {
+        "binding": "AI"
+    }
+}

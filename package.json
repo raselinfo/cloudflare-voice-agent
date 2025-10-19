@@ -1,0 +1,49 @@
+{
+  "name": "nextjs-cloudflare-voice-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Voice Assistant with Next.js, Hono, and Cloudflare Workers + Durable Objects",
+  "keywords": [
+    "hono",
+    "cloudflare-workers",
+    "durable-objects",
+    "nextjs",
+    "voice-ai",
+    "typescript"
+  ],
+  "author": "Rasel Hossain",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "wrangler deploy",
+    "worker:dev": "wrangler dev --config worker/wrangler.jsonc",
+    "worker:deploy": "wrangler deploy --config worker/wrangler.jsonc",
+    "types:check": "tsc --noEmit",
+    "types:generate": "wrangler types",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@cloudflare/ai": "^1.2.2",
+    "@opennextjs/cloudflare": "^1.6.5",
+    "@ricky0123/vad-react": "^0.0.30",
+    "hono": "^4.10.1",
+    "next": "15.4.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20251011.0",
+    "@tailwindcss/postcss": "^4.1.14",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.6",
+    "postcss": "^8",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "wrangler": "^4.29.1"
+  }
+}
