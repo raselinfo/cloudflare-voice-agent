@@ -16,8 +16,8 @@ export default function VoiceVisualStatus({
   isConnected,
 }: VoiceVisualStatusProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number>();
-  const analyserRef = useRef<AnalyserNode>();
+  const animationRef = useRef<number | undefined>(undefined);
+  const analyserRef = useRef<AnalyserNode | undefined>(undefined);
 
   // Initialize audio analyzer for microphone
   useEffect(() => {
